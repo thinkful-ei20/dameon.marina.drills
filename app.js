@@ -220,14 +220,20 @@
 // dustWarning('Main St and Pacific Ave');
 
 
-let turtle = [[0, 0], [0, 5], [-1, -3],  [2, -4], [3, 2]];
+// let turtle = [[0, 0], [0, 5], [-1, -3],  [2, -4], [3, 2]];
 
-turtle.filter(element =>  element[0]>=0&&element[1]>=0)
-      .map(element => element[0]+element[1])
-      .forEach(element => console.log(element));
+// turtle.filter(element =>  element[0]>=0&&element[1]>=0)
+//       .map(element => element[0]+element[1])
+//       .forEach(element => console.log(element));
 
 
+function reduce(str) {
+	let initialValue = '';
+	str.split(' ').forEach(el => initialValue = initialValue.concat(el.length === 3 ? " " : el[el.length-1].toUpperCase()));
+	return initialValue;
+}
 
+console.log(reduce('noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'));
 
 
 
