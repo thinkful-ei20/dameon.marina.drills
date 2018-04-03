@@ -198,23 +198,41 @@
 //  return newArr;
 // }
 
-function hazardWarningCreator(typeOfWarning) {
-	let warningCounter = 0;
-	let times;
-	return function(location) {
-		warningCounter++;
-		warningCounter === 1 ? times = 'time' : times = 'times';
-		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!\n
-			The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${times} today!`);
-	}
-}
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const snowWarning = hazardWarningCreator('Snow on the Road');
-const dustWarning = hazardWarningCreator('Dust on the Road');
+// function hazardWarningCreator(typeOfWarning) {
+// 	let warningCounter = 0;
+// 	let times;
+// 	return function(location) {
+// 		warningCounter++;
+// 		warningCounter === 1 ? times = 'time' : times = 'times';
+// 		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!\n
+// 			The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${times} today!`);
+// 	}
+// }
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// const snowWarning = hazardWarningCreator('Snow on the Road');
+// const dustWarning = hazardWarningCreator('Dust on the Road');
 
-rocksWarning('Main St and Pacific Ave');
-snowWarning('Main St and Pacific Ave');
-dustWarning('Main St and Pacific Ave');
-rocksWarning('Main St and Pacific Ave');
-snowWarning('Main St and Pacific Ave');
-dustWarning('Main St and Pacific Ave');
+// rocksWarning('Main St and Pacific Ave');
+// snowWarning('Main St and Pacific Ave');
+// dustWarning('Main St and Pacific Ave');
+// rocksWarning('Main St and Pacific Ave');
+// snowWarning('Main St and Pacific Ave');
+// dustWarning('Main St and Pacific Ave');
+
+
+let turtle = [[0, 0], [0, 5], [-1, -3],  [2, -4], [3, 2]];
+
+turtle.filter(element =>  element[0]>=0&&element[1]>=0)
+      .map(element => element[0]+element[1])
+      .forEach(element => console.log(element));
+
+
+
+
+
+
+
+
+
+
+
