@@ -156,20 +156,45 @@
 //  })();
  
 
-function repeat(fn, num) {
-	for (let i = 0;  i < num; i++) {
-		fn();
-	}
-}
+// function repeat(fn, num) {
+// 	for (let i = 0;  i < num; i++) {
+// 		fn();
+// 	}
+// }
 
-function hello() {
-	console.log('Hello world!');
-}
+// function hello() {
+// 	console.log('Hello world!');
+// }
 
-function goodBye() {
-	console.log('Good Buy!');
-}
+// function goodBye() {
+// 	console.log('Good Buy!');
+// }
 
-repeat(hello, 5);
-repeat(goodBye, 5);
+// repeat(hello, 5);
+// repeat(goodBye, 5);
+
+// DO NOT EDIT BETWEEN THESE LINES ----->
+// Return only names that begin with 'R'
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+const filteredNames = filter(myNames, function(name) {
+  // This is a "predicate function" - it's a function that only returns a boolean
+  console.log(name[0]);
+  return name[0] === 'R';
+});
+
+console.log(filteredNames); // => ['Rich', 'Ray']
+// <---- DO NOT EDIT BETWEEN THESE LINES
+
+// TASK: DEFINE YOUR FILTER FUNCTION BELOW:
+function filter(arr,fn) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    if (fn(arr[i])){
+      console.log(arr.length);
+      newArr.push(arr[i]);
+    }
+  }
+ return newArr;
+}
 
